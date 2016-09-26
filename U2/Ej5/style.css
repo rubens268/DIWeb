@@ -1,0 +1,6 @@
+@import url("moreStyle.css");
+
+
+.segundo + p {
+	color: orange;
+}
