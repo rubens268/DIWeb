@@ -4,6 +4,7 @@ body {
 
 header h1 {
 	color: blue;
+	font-family: "Garamond";
 }
 
 article h1 {
@@ -17,6 +18,7 @@ article p:nth-child(even) {
 
 
 i{
+	font-family: "Courier New";
 	color: green;
 	font-style: normal;
 }
@@ -25,13 +27,18 @@ span {
 	color: blue;
 }
 
+span.destacado {
+	font-weight: bold;
+}
+
 #japo {
-	color: red;
+	color: magenta;
 	font-size: 24px;
 }
 
 b.destacado {
 	color:red;
+	font-style: italic;
 }
 
 .imagen p, footer>span {
@@ -40,10 +47,15 @@ b.destacado {
 }
 
 .imagen p {
-	font-weight: bold;
+	
 	font-variant: small-caps;
 }
 
 footer a, footer a span {
 	color: green;
+}
+
+a:hover, a:hover {
+	color: gray;
+	font-weight: bold;
 }
