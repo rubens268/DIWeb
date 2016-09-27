@@ -1,0 +1,89 @@
+body {
+	background-color: black;
+}
+
+/** 1 **/
+i:first-child {
+	color: white;
+}
+
+/** 2 **/
+#dos {
+	color: green;
+}
+
+/** 3 **/
+.tres {
+	color: lightgreen;
+}
+
+/** 4 **/
+div p {
+	color: red;
+}
+
+/** 5 **/
+[href] {
+	color: pink;
+}
+
+/** 6 **/
+p:nth-child(6) {
+	color: magenta;
+}
+
+/** 7 **/
+#siete > p {
+	color: purple;
+}
+
+/** 8 **/
+#siete ~ p {
+	color: orange;
+}
+
+/** 9 **/
+[color="lightblue"] {
+	color: lightblue;
+}
+
+/** 10 **/
+b:first-of-type {
+	color: blue;
+}
+/** 11 **/
+div:empty {
+	background-color: brown;
+	width: 200px;
+	height: 10px;
+}
+/** 12 **/
+div + p {
+	color: chocolate;
+}
+/** 13 **/
+[href$=".asp"] {
+	color: cyan;
+}
+/** 14 **/
+[href^="https"] {
+	color: darkblue;
+}
+/** 15 **/
+p:lang(eng) {
+	color: darkred;
+}
+/** 16 **/
+[href*=w3c] {
+	color: gold;
+}
+
+/** 17 **/
+.lime:link, .lime:visited {
+	color: lime;
+}
+
+/** 18 **/
+i:last-child {
+	color: grey;
+}
