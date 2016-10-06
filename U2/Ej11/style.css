@@ -1,0 +1,47 @@
+/*  El atributo table-layout se puede utilizar para que la tabla se ajuste o no al contenido de las celdas, los posibles valores son:
+	auto: Se ajusta automaticamente al tamaño del contenido.
+	fixed: No se ajusta al tamaño, se queda al que le digas y el contenido sale fuera
+*/
+table {
+	border-spacing: 0px;
+    border-collapse: collapse;
+    table-layout: auto;
+}
+
+table *{
+	border: 3px solid black;
+	text-align: center;
+	font-style: normal;
+}
+
+tr:nth-child(even) {
+	background-color: lightgrey;
+}
+
+body {
+	font-style: italic;
+}
+
+td {
+	vertical-align: bottom;
+}
+
+.html {
+	background: url(img/HTML5.png) no-repeat left center;
+}
+
+.css {
+	background: url(img/css3.png) no-repeat left center;
+}
+
+.css, .html {
+	background-size: 50px 50px;
+	padding-left: 53px;
+	padding-top: 25px;
+	padding-bottom: 25px;
+	vertical-align: center;
+}
+
+.css:active, .html:active {
+	background-color: #FFFF66;
+}

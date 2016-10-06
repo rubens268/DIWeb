@@ -1,0 +1,27 @@
+body {
+	background: url(img/wall4.jpg);
+}
+
+h1 {
+	background: url(img/blue1961.jpg);
+	color: white;
+	border: 3px solid black;
+}
+
+.pdf {
+ color: #E37529;
+ padding: 0 0 0 18px;
+ background: #FFF url(./img/pdf.png) no-repeat left center;
+ background-size: 18px;
+}
+
+[href="#header"] {
+	text-decoration: none;
+	background-color: green;
+	color: white;
+	padding: 15px;
+}
+
+[href="#header"]:hover {
+	background-color: lightgreen;
+}
