@@ -24,6 +24,11 @@ body {
 
 td {
 	vertical-align: bottom;
+	color: black;
+}
+
+span {
+	color: black;
 }
 
 .html {
