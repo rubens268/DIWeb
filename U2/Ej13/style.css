@@ -1,0 +1,31 @@
+ul {
+	list-style-type: square;
+	background-color: #F2F2F2;
+	width: 140px;
+	color: gray;
+    
+}
+
+#firstUL {
+	list-style-type: none;
+	width: 180px;
+    border: 1px solid gray;
+    padding: 0px;
+}
+
+li {
+	border-bottom: 1px solid gray;
+	border-top: 1px solid gray;
+	padding: 3px;
+	padding-left: 20px;
+	margin: -1px;
+}
+
+li ul {
+	padding-left: 20px;
+}
+
+li:hover {
+	background-color: lightgray;
+	color: green;
+}
