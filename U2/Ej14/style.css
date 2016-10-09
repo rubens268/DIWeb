@@ -1,0 +1,31 @@
+div {
+  margin: .4em 0;
+}
+div label {
+  width: 25%;
+  float: left;
+}
+
+[for="hombre"], [for="mujer"], [for="forumFeedback"], [for="eventsFeedback"] {
+	width: auto;
+	float: inherit;
+}
+
+[type="password"] {
+	width: 10em;
+}
+
+textarea{
+	height: 40px;
+	overflow: scroll;
+}
+
+input, textarea {
+	border-radius: 5px;
+}
+
+input:focus, textarea:focus {
+	border-radius: 5px;
+	background-color: lightgray;
+	border-color: violet;
+}

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>U2 Ej14</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    <fieldset>
+      <legend>Inscripción</legend>
+      <fieldset>
+        <legend>Información personal</legend>
+          <div>
+            <label for="name">Nombre*:</label>
+            <input type="text" id="name" placeholder="Nombre..." required="required" autofocus="autofocus">
+          </div>
+          <div>
+            <label for="surname">Apellidos*:</label>
+            <input type="text" id="surname" placeholder="Apellidos..." required="required">
+          </div>
+          <div>
+            <label for="email">Email*:</label>
+            <input type="email" id="email" placeholder="Email..." required="required">
+          </div>
+          <div>
+            <label>Sexo:</label>
+            <input type="radio" name="sex" value="Hombre" id="hombre"><label for="hombre">Hombre</label>
+            <input type="radio" name="sex" value="Mujer" id="mujer"><label for="mujer">Mujer</label>
+          </div>
+          <div>
+            <label for="birthday">Fecha de Nacimiento*:</label>
+            <input type="date" id="birthday" required="required">
+          </div>
+          <div>
+            <label>Provincia:</label>
+            <select>
+              <option selected="selected" disabled="disabled">Escoge provincia</option>
+              <option value="Alicante">Alicante</option>
+              <option value="Castellon">Castellón</option>
+              <option value="Valencia">Valencia</option>
+            </select>
+          </div>
+          <div>
+            <label for="population">Población:</label>
+            <input type="text" id="population" placeholder="Población...">
+          </div>
+          <div>
+            <label for="telf">Telefono:</label>
+            <input type="tel" id="telf" placeholder="Telefono...">
+          </div>
+          <div>
+            <label>Motivo de inscripción:</label>
+            <textarea type="tel" id="telf" placeholder="Motivo de inscripción..." cols="100"></textarea>
+          </div>
+          <div>
+            <label>Escoge el color de tu avatar:</label>
+            <input type="color">
+          </div>
+      </fieldset>
+      <fieldset>
+        <legend>Creación de usuario</legend>
+        <div>
+            <label for="username">Nombre de usuario*:</label>
+            <input type="text" id="username" placeholder="Nombre de usuario..." required="required">
+          </div>
+          <div>
+            <label for="pass">Contraseña*:</label>
+            <input type="password" id="pass" placeholder="Contraseña..." required="required" maxlength="8">
+          </div>
+          <div>
+            <label for="pass2">Repite contraseña*:</label>
+            <input type="password" id="pass2" placeholder="Repite contraseña..." required="required" maxlength="8">
+          </div>
+      </fieldset>
+      <div>
+        <input type="checkbox" id="forumFeedback"> <label for="forumFeedback">Deseo recibir copias de los mensajes del foro en mi correo electrónico</label>
+      </div>
+      <div>
+        <input type="checkbox" id="eventsFeedback"> <label for="eventsFeedback">Deseo recibir notificaciones de próximos eventos en mi correo electrónico</label>
+      </div>
+      <button>Confirmar registro</button>
+      <p>Nota: los campos marcados con "*" son obligatorios</p>
+    </fieldset>
+  </body>
+</html>
