@@ -31,6 +31,6 @@ input:focus, textarea:focus {
 }
 
 .note {
-    border: 1px solid gray;
+    border: 1px dashed gray;
     font-style: italic;
 }
