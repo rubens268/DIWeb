@@ -9,6 +9,7 @@ hr {
     border-style: inset;
 }
 
+/* Header */
 header {
 	background-color: lightblue;
 	display: table;
@@ -16,19 +17,22 @@ header {
 }
 
 header > img {
-	height: auto;
-	width: 100px;
+	float: right;
+	height: 100px;
+	width: 200px;
 	display: table-cell;
 	padding: 10px;
 	vertical-align: middle;
 }
 
 header h1 {
+	width: 50%;
 	display: table-cell;
 	text-align: left;
 	vertical-align: middle;
 }
 
+/* Menu vertical */
 #verticalMenu {
 	background-color: lightgrey;
 	width: 100%;
@@ -40,7 +44,75 @@ header h1 {
 	padding: 5px;
 }
 
+#verticalMenu > ul > li:hover {
+	background-color: gray;
+	font-weight: bold;
+	padding: 5px;
+}
+
 #verticalMenu >ul > li > a {
 	text-decoration: none;
 	color: black;
+}
+
+/* Submenus */
+#inicioSubmenu, #cat1Submenu, #cat2Submenu, #contactoSubmenu {
+	display: none;
+}
+
+#verticalMenu > ul > li:hover > #inicioSubmenu, #verticalMenu > ul > li:hover > #cat1Submenu, #verticalMenu > ul > li:hover > #cat2Submenu, #verticalMenu > ul > li:hover > #contactoSubmenu {
+	position: absolute;
+	display: initial;
+	background-color: lightgray;
+	margin-left: -5px;
+	margin-top: 5px;
+	padding-left: 0px;
+}
+
+#verticalMenu > ul > li:hover > #inicioSubmenu > li, #verticalMenu > ul > li:hover > #cat1Submenu > li, #verticalMenu > ul > li:hover > #cat2Submenu > li, #verticalMenu > ul > li:hover > #contactoSubmenu > li{
+	padding-left: 20px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-right: 20px;
+	list-style-type: none;
+}
+
+#verticalMenu > ul > li:hover > #inicioSubmenu > li > a, #verticalMenu > ul > li:hover > #cat1Submenu > li > a, #verticalMenu > ul > li:hover > #cat2Submenu > li > a, #verticalMenu > ul > li:hover > #contactoSubmenu > li > a{
+	text-decoration: none;
+	color: black;
+}
+
+#verticalMenu > ul > li:hover > #inicioSubmenu > li:hover, #verticalMenu > ul > li:hover > #cat1Submenu > li:hover, #verticalMenu > ul > li:hover > #cat2Submenu > li:hover, #verticalMenu > ul > li:hover > #contactoSubmenu > li:hover  {
+	background-color: gray;
+}
+
+/* SubSubmenus */
+#inicioSubSubmenu {
+	display: none;
+}
+
+#verticalMenu > ul > li:hover > #inicioSubmenu > li:hover > #inicioSubSubmenu {
+	position: absolute;
+	display: initial;
+	background-color: lightgray;
+    margin-left: 69px;
+    margin-top: -23px;
+	padding-left: 0px;
+}
+
+#verticalMenu > ul > li:hover > #inicioSubmenu > li:hover > #inicioSubSubmenu > li {
+	padding-left: 20px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-right: 20px;
+	list-style-type: none;
+}
+
+#verticalMenu > ul > li:hover > #inicioSubmenu > li:hover > #inicioSubSubmenu > li > a{
+	text-decoration: none;
+	color: black;
+}
+
+#verticalMenu > ul > li:hover > #inicioSubmenu > li:hover > #inicioSubSubmenu > li:hover {
+	background-color: gray;
 }
