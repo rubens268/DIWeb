@@ -1,0 +1,46 @@
+* {
+	margin: 0px;
+	border: 0px;
+	box-sizing: border-box;
+}
+
+hr {
+	border-width: 1px;
+    border-style: inset;
+}
+
+header {
+	background-color: lightblue;
+	display: table;
+	width:  100%;
+}
+
+header > img {
+	height: auto;
+	width: 100px;
+	display: table-cell;
+	padding: 10px;
+	vertical-align: middle;
+}
+
+header h1 {
+	display: table-cell;
+	text-align: left;
+	vertical-align: middle;
+}
+
+#verticalMenu {
+	background-color: lightgrey;
+	width: 100%;
+}
+
+#verticalMenu > ul > li {
+	display: inline-block;
+	font-weight: bold;
+	padding: 5px;
+}
+
+#verticalMenu >ul > li > a {
+	text-decoration: none;
+	color: black;
+}
