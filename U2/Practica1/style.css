@@ -4,10 +4,6 @@
 	box-sizing: border-box;
 }
 
-hr {
-	border-width: 1px;
-    border-style: inset;
-}
 
 /* Header */
 header {
@@ -17,7 +13,6 @@ header {
 }
 
 header > img {
-	float: right;
 	height: 100px;
 	width: 200px;
 	display: table-cell;
@@ -33,86 +28,148 @@ header h1 {
 }
 
 /* Menu vertical */
-#verticalMenu {
+nav {
 	background-color: lightgrey;
 	width: 100%;
 }
 
-#verticalMenu > ul > li {
+nav > ul > li {
 	display: inline-block;
 	font-weight: bold;
 	padding: 5px;
 }
 
-#verticalMenu > ul > li:hover {
+nav > ul > li:hover {
 	background-color: gray;
 	font-weight: bold;
 	padding: 5px;
 }
 
-#verticalMenu >ul > li > a {
+nav >ul > li > a {
 	text-decoration: none;
 	color: black;
 }
 
 /* Submenus */
-#inicioSubmenu, #cat1Submenu, #cat2Submenu, #contactoSubmenu {
-	display: none;
+li a {
+	text-decoration: none;
+	color: black;
 }
 
-#verticalMenu > ul > li:hover > #inicioSubmenu, #verticalMenu > ul > li:hover > #cat1Submenu, #verticalMenu > ul > li:hover > #cat2Submenu, #verticalMenu > ul > li:hover > #contactoSubmenu {
+ul li:hover {
+	background-color: gray;
+}
+
+[id*="menu"], [id*="Menu"] {
+	display: none;
+	background-color: lightgray;
+	list-style: none;
+}
+
+li:hover > #inicioSubmenu, li:hover > #cat1Submenu, li:hover > #cat2Submenu, li:hover > #contactoSubmenu {
 	position: absolute;
 	display: initial;
-	background-color: lightgray;
+	
 	margin-left: -5px;
 	margin-top: 5px;
 	padding-left: 0px;
 }
 
-#verticalMenu > ul > li:hover > #inicioSubmenu > li, #verticalMenu > ul > li:hover > #cat1Submenu > li, #verticalMenu > ul > li:hover > #cat2Submenu > li, #verticalMenu > ul > li:hover > #contactoSubmenu > li{
+li:hover > #inicioSubmenu > li, li:hover > #cat1Submenu > li, li:hover > #cat2Submenu > li, li:hover > #contactoSubmenu > li{
 	padding-left: 20px;
 	padding-top: 5px;
 	padding-bottom: 5px;
 	padding-right: 20px;
 	list-style-type: none;
-}
-
-#verticalMenu > ul > li:hover > #inicioSubmenu > li > a, #verticalMenu > ul > li:hover > #cat1Submenu > li > a, #verticalMenu > ul > li:hover > #cat2Submenu > li > a, #verticalMenu > ul > li:hover > #contactoSubmenu > li > a{
-	text-decoration: none;
-	color: black;
-}
-
-#verticalMenu > ul > li:hover > #inicioSubmenu > li:hover, #verticalMenu > ul > li:hover > #cat1Submenu > li:hover, #verticalMenu > ul > li:hover > #cat2Submenu > li:hover, #verticalMenu > ul > li:hover > #contactoSubmenu > li:hover  {
-	background-color: gray;
 }
 
 /* SubSubmenus */
-#inicioSubSubmenu {
-	display: none;
-}
 
-#verticalMenu > ul > li:hover > #inicioSubmenu > li:hover > #inicioSubSubmenu {
+li:hover > #inicioSubSubmenu, li:hover > #categoria2SubSubmenu, li:hover > #categoria1SubSubmenu, li:hover > #contactoSubSubmenu {
 	position: absolute;
 	display: initial;
-	background-color: lightgray;
-    margin-left: 69px;
-    margin-top: -23px;
+    /*margin-left: 77px;*/
+    margin-left: 80%;
+    margin-top: -27px;
 	padding-left: 0px;
+	width: 180px;
 }
 
-#verticalMenu > ul > li:hover > #inicioSubmenu > li:hover > #inicioSubSubmenu > li {
+li:hover > #inicioSubSubmenu > li, li:hover > #categoria2SubSubmenu > li, li:hover > #categoria1SubSubmenu > li, li:hover > #contactoSubSubmenu > li {
 	padding-left: 20px;
 	padding-top: 5px;
 	padding-bottom: 5px;
 	padding-right: 20px;
-	list-style-type: none;
+	
 }
 
-#verticalMenu > ul > li:hover > #inicioSubmenu > li:hover > #inicioSubSubmenu > li > a{
-	text-decoration: none;
-	color: black;
+/* Menu vertical */
+
+aside {
+	float: right;
+	margin-top: 20px;
+	
 }
 
-#verticalMenu > ul > li:hover > #inicioSubmenu > li:hover > #inicioSubSubmenu > li:hover {
-	background-color: gray;
+aside > ul {
+	background-color: lightgray;
+	list-style: none;
+	padding: 10px;
+	font-weight: bold;
+	width: 190px;
+}
+
+#eneroSubmenu, #febreroSubmenu {
+    padding-left: 10px;
+}
+
+li:hover > #eneroSubmenu, li:hover > #febreroSubmenu {
+	display: inherit;
+}
+
+
+/* Contenedor */
+
+#container {
+	width: 960px;
+	margin: auto;
+}
+
+/* Articulos */
+article {
+	background-color: linen;
+	padding: 10px;
+	margin: 20px;
+	border: 1px solid gray;
+}
+
+article img {
+    height: 250px;
+}
+
+figcaption {
+    font-style: italic;
+}
+
+time {
+	color: gray;
+}
+
+article footer p{
+    color: steelblue;
+    font-weight: bold;
+    text-align: right;
+    padding: 2px;
+}
+
+/* Pie */
+
+footer p{
+	padding: 10px;
+	text-align: center;
+}
+
+hr {
+	border-width: 1px;
+    border-style: inset;
 }
