@@ -20,7 +20,8 @@
         .fa-linkedin-square { color: #0e76a8; font-size: 150px; }
         .fa-google-plus-square { color: #D34836; font-size: 150px; }
         .fa-facebook-square:hover ,.fa-twitter-square:hover ,.fa-linkedin-square:hover ,.fa-google-plus-square:hover { opacity: 0.7; }
-        #reproductor { right: 0px; position: absolute; } 
+        #zonaReproductor { right: 0px; position: absolute; } 
+        .hide { display: none; }
         </style>
         
         <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
@@ -28,15 +29,29 @@
         <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16">
         <link rel="manifest" href="manifest.json">
         <meta name="theme-color" content="#ffffff">
+
+        <script>
+            function playPause () {
+                if (document.getElementById('reproductor').paused)
+                    document.getElementById('reproductor').play();
+                else
+                    document.getElementById('reproductor').pause();
+            }
+        </script>
     </head>
     <body>
         <header>
-            <div id="reproductor">
-                    <audio controls>
-                        <source src="audio/Alan Walker - Spectre.ogg" type="audio/ogg">
-                        <source src="audio/Alan Walker - Spectre.mp3" type="audio/mpeg">
-                        Tu navegador no soporta las etiquetas audio
-                    </audio>
+            <div id="zonaReproductor"></span>">
+                <span id="play" onclick="playPause"></span>
+                <span id="pause" class="hide" onclick="playPause"></span>
+                <span id="mute" onclick="document.getElementById('reproductor').muted = !document.getElementById('reproductro').muted; "></span>
+                <span id="volUp" onclick="document.getElementById('reproductor').volume+=0.1;"></span>
+                <span id="volDw" onclick="document.getElementById('reproductor').volume-=0.1;"></span>
+                <audio id="reproductor">
+                    <source src="audio/Alan Walker - Spectre.ogg" type="audio/ogg">
+                    <source src="audio/Alan Walker - Spectre.mp3" type="audio/mpeg">
+                    Tu navegador no soporta las etiquetas audio
+                </audio>
             </div>
             <img src="img/arrow.svg"></img><h1>Diseño Grafico para Web Responsive</h1>
         </header>
