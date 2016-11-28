@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+        * { margin: 0px; padding: 0px; }
+        header { display: table; }
+        header>h1 { display: table-cell; vertical-align: middle; }
+        header>img { width: 200px; display: table-cell; padding: 10px; }
+        article>picture>* { width: 100%; }
+        section>img { width: 200px; padding: 10px; }
+        section { width: 49%; display: inline-block; }
+        .phone { background: url('img/phoneYMail.png') no-repeat -1px -1px; width: 128px; height: 127px; display: inline-block; } 
+        .mail { background: url('img/phoneYMail.png') no-repeat -146px -17px; width: 127px; height: 96px; display: inline-block; }
+        </style>
+        
+        <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+        <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32">
+        <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16">
+        <link rel="manifest" href="manifest.json">
+        <meta name="theme-color" content="#ffffff">
+    </head>
+    <body>
+        <header>
+            <img src="img/arrow.svg"></img><h1>Diseño Grafico para Web Responsive</h1>
+        </header>
+        <article>
+            <picture>
+                <source media="(min-width: 1024px)" srcset="img/mobile-phone-1419275-1024px-70.jpg">
+                <source media="(min-width: 640px)" srcset="img/mobile-phone-1419275-640px-70.jpg">
+                <source media="(min-width: 320px)" srcset="img/mobile-phone-1419275-320px-70.jpg">
+                <!-- img para navegadores que no soportan el picture element -->
+                <img src="img/mobile-phone-1419275.jpg.jpg" alt="su navegador no es compatible">
+            </picture>
+        </article>
+        <section>
+            <img src="img/yo-sin-metadatos.svg"></img>
+        </section>
+        <section>
+            <a href="#"><span class="phone"></span></a>
+            <a href="#"><span class="mail"></span></a>        
+        </section>
+    </body>
+</html>
