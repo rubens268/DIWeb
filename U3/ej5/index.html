@@ -50,6 +50,13 @@
                     document.getElementById('play').style.display = "inline-block";
                 }
             }
+            function mute () {
+                document.getElementById('reproductor').muted = !document.getElementById('reproductor').muted;
+                if (document.getElementById('reproductor').muted)
+                    document.getElementById('mute').style.opacity = "0.8";
+                else
+                    document.getElementById('mute').style.opacity = "1";
+            }
         </script>
     </head>
     <body>
@@ -57,7 +64,7 @@
             <div id="zonaReproductor"></span>
                 <span id="play" onclick="playPause()"></span>
                 <span id="pause" onclick="playPause()"></span>
-                <span id="mute" onclick="document.getElementById('reproductor').muted = !document.getElementById('reproductor').muted; "></span>
+                <span id="mute" onclick="mute()"></span>
                 <span id="volUp" onclick="document.getElementById('reproductor').volume+=0.1;"></span>
                 <span id="volDw" onclick="document.getElementById('reproductor').volume-=0.1;"></span>
                 <audio id="reproductor">
