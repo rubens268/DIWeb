@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://use.fontawesome.com/b1858531e2.js"></script>
+        <style>
+        * { margin: 0px; padding: 0px; }
+        header { display: table; }
+        header>h1 { display: table-cell; vertical-align: middle; }
+        header>img { width: 200px; display: table-cell; padding: 10px; }
+        article>picture>* { width: 100%; }
+        section>img { width: 200px; padding: 10px; }
+        section { width: 49%; display: inline-block; }
+        .phone { background: url('img/phoneYMail.png') no-repeat -1px -1px; width: 128px; height: 127px; display: inline-block; } 
+        .mail { background: url('img/phoneYMail.png') no-repeat -146px -17px; width: 127px; height: 96px; display: inline-block; }
+        .fa-facebook-square { color: #3b5998; font-size: 150px; }
+        .fa-twitter-square { color: #4099FF; font-size: 150px; }
+        .fa-linkedin-square { color: #0e76a8; font-size: 150px; }
+        .fa-google-plus-square { color: #D34836; font-size: 150px; }
+        .fa-facebook-square:hover ,.fa-twitter-square:hover ,.fa-linkedin-square:hover ,.fa-google-plus-square:hover { opacity: 0.7; }
+        #zonaReproductor { right: 0px; position: absolute; } 
+        #play { background: url('img/audioControl.png') no-repeat -136px -1px; width: 128px; height: 128px; display: none; cursor: pointer; }
+        #pause { background: url('img/audioControl.png') no-repeat 0 0; width: 130px; height: 130px; display: inline-block; cursor: pointer; }
+        #mute { background: url('img/audioControl.png') no-repeat 0 -143px; width: 130px; height: 130px; display: inline-block; cursor: pointer; }
+        #volUp { background: url('img/audioControl.png') no-repeat -276px -1px; width: 127px; height: 131px; display: inline-block; cursor: pointer; }
+        #volDw { background: url('img/audioControl.png') no-repeat -134px -146px; width: 130px; height: 128px; display: inline-block; cursor: pointer; }
+        #play:hover, #pause:hover, #mute:hover, #volUp:hover, #volDw:hover { opacity: 0.7; }
+        #videoPlayer {
+            width: 100%;
+            height: 177%;
+        }
+        </style>
+        
+        <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+        <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32">
+        <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16">
+        <link rel="manifest" href="manifest.json">
+        <meta name="theme-color" content="#ffffff">
+
+        <script>
+            function playPause () {
+                if (document.getElementById('reproductor').paused)
+                {
+                    document.getElementById('reproductor').play();
+                    document.getElementById('pause').style.display = "inline-block";
+                    document.getElementById('play').style.display = "none";
+                }
+                else
+                {
+                    document.getElementById('reproductor').pause();
+                    document.getElementById('pause').style.display = "none";
+                    document.getElementById('play').style.display = "inline-block";
+                }
+            }
+            function mute () {
+                document.getElementById('reproductor').muted = !document.getElementById('reproductor').muted;
+                if (document.getElementById('reproductor').muted)
+                    document.getElementById('mute').style.opacity = "0.8";
+                else
+                    document.getElementById('mute').style.opacity = "1";
+            }
+        </script>
+    </head>
+    <body>
+        <header>
+            <div id="zonaReproductor"></span>
+                <span id="play" onclick="playPause()"></span>
+                <span id="pause" onclick="playPause()"></span>
+                <span id="mute" onclick="mute()"></span>
+                <span id="volUp" onclick="document.getElementById('reproductor').volume+=0.1;"></span>
+                <span id="volDw" onclick="document.getElementById('reproductor').volume-=0.1;"></span>
+                <audio id="reproductor" autoplay="autoplay">
+                    <source src="audio/Alan Walker - Spectre.ogg" type="audio/ogg">
+                    <source src="audio/Alan Walker - Spectre.mp3" type="audio/mpeg">
+                    Tu navegador no soporta las etiquetas audio
+                </audio>
+            </div>
+            <img src="img/arrow.svg"></img><h1>Diseño Grafico para Web Responsive</h1>
+        </header>
+        <article>
+            <picture>
+                <source media="(min-width: 1024px)" srcset="img/mobile-phone-1419275-1024px-70.jpg">
+                <source media="(min-width: 640px)" srcset="img/mobile-phone-1419275-640px-70.jpg">
+                <source media="(min-width: 320px)" srcset="img/mobile-phone-1419275-320px-70.jpg">
+                <!-- img para navegadores que no soportan el picture element -->
+                <img src="img/mobile-phone-1419275.jpg.jpg" alt="su navegador no es compatible">
+            </picture>
+        </article>
+        <section>
+            <video id="videoPlayer" controls>
+                <source src="video/Alan Walker - Fade.mp4" type="video/mp4">
+                Tu navegador no soporta las etiquetas audio
+            </video>
+        </section>
+        <section>
+            <a href="#"><span class="phone"></span></a>
+            <a href="#"><span class="mail"></span></a>
+            <a href="#"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+            <a href="#"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+            <a href="#"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
+            <a href="#"><i class="fa fa-google-plus-square" aria-hidden="true"></i></a>
+            
+        </section>
+    </body>
+</html>
